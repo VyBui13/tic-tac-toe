@@ -10,11 +10,13 @@ export default function Square({
   isWinning,
 }: SquareProps) {
   // Thay đổi style nếu là ô chiến thắng
-  const winningStyle = isWinning ? "bg-green-300" : "bg-white";
+  const winningStyle = isWinning
+    ? "bg-green-300 text-white"
+    : "bg-[var(--background-color)]";
 
   return (
     <button
-      className={`h-24 w-24 border border-gray-400 m-[-1px] float-left text-5xl font-bold leading-none text-center ${winningStyle}`}
+      className={`cursor-pointer h-30 w-30 border border-gray-400 m-[-1px] float-left text-5xl font-bold leading-none text-center ${winningStyle}`}
       onClick={onSquareClick}
     >
       {value}
